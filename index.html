@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Muzzle</title>
+		<meta name="description" content="Muzzle helps you keep comments relevant">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.png"> <!--https://thenounproject.com/search/?q=patrol&i=336263-->
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+
+			// Menu scroll behavior
+
+			var scrollMe = function(target){
+
+				// Define time for scrolling in ms
+				var duration = 900;
+
+				$('html, body').animate({scrollTop: $('#'+target).offset().top}, duration);
+			}
+
+
+			// Fix menu color on scroll
+
+			$(function() {
+    
+			    // First, determine the y position of the #scroll_trigger element to understand approx where on the page things should change
+			    var trigger_Y = $('#scroll_trigger').offset().top;
+
+			    // Create offset for where things should start to happen and compensate for it in trigger
+			    var my_offset = 100;
+			    trigger_Y -= my_offset;
+			    if(trigger_Y<0){trigger_Y=0;}
+
+			    // Create function for what should happen when we scroll
+			   	var on_scroll = function() {    
+			        
+			        // Get the current scroll position
+			        var scrollPosition = $w.scrollTop();
+
+			        // Tweak scroll position according to start offset
+			        scrollPosition -= my_offset;
+			        if(scrollPosition<0){scrollPosition=0;}
+
+			        console.log('Current scroll: '+scrollPosition+' TriggerY: '+trigger_Y);
+
+			        // Calculate next alpha value
+			        var new_alpha = .9*(scrollPosition/trigger_Y);
+
+			        // Cap new alpha at desired max
+			        if(new_alpha>.9){new_alpha=.9};
+
+			        // If we have reached the magic box, change the background color
+			        $('#menu').css('background-color', 'rgba(10,23,41,'+new_alpha+')');
+			    };
+			    
+			    // Create a jQuery reference to the window. Then, listen for scrolling.
+			    var $w = $(window);
+			    $w.scroll(on_scroll);
+
+			    // Catch if page is loaded somewhere else than with scroll at very top
+			    if ($w.scrollTop()>0){
+			    	console.log('Turns out page was loaded on: '+$w.scrollTop());
+			    	//If so, run update to set initial state to right value
+			    	on_scroll();
+			    };
+
+			});
+
+
+		</script>
+
+	</head>
+	<body>
+
+
+		<div id="menu">
+
+			<ul id="leftnav">
+				<li><a href="#" onClick="scrollMe('hero')"><img id="whitelogomenu" src="pic/whitelogo.svg"></a></li>
+				<li><a href="#" onClick="scrollMe('howitworks')">How it works</a></li>
+				<li><a href="#" onClick="scrollMe('playyourpart')">Play your part</a></li>
+				<li><a href="#" onClick="scrollMe('why')">Why</a></li>
+				<li><a href="#" onClick="scrollMe('thenwhat')">Privacy Policy</a></li>
+			</ul>
+
+			<ul id="rightnav">
+				<li>Install Plugin</li>
+				<li>Log in</li>
+			</ul>
+
+		</div>
+
+		<!--****************************************      HERO     ****************************************************-->
+
+		<section id="hero" class="screen_bg">
+
+			<div class="screen">
+
+				<!-- VERTICAL ALIGN TRICK -->
+				<div class="valign_dummy"></div>
+
+				<div class="content">
+
+					<h1 id="scroll_trigger" Muzzle helps you keep comments relevant</h1>
+					<h2>If you see an unpleasant or unacceptable comment on Reddit, use Muzzle to get rid of it.</h2>
+					<h2>Download the chrome plug-in and start using it right away!</h2>
+
+					<button>Sign up now!</button>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!--*************************************      HOW IT WORKS     *************************************************-->
+
+		<section id="howitworks" class="screen_bg">
+
+			<div class="screen">
+
+				<!-- VERTICAL ALIGN TRICK -->
+				<div class="valign_dummy"></div>
+
+				<div class="content">
+
+					<h1>How it works</h1>
+					<h2>Would you like to get rid of all the bad comments and trolls on Reddit?
+						<br>Use Muzzle to report trolls and block the comments that disturbs you!</h2>
+					
+					<div id="how1" class="how_img_l">
+						<img id="how_install" src="pic/install.svg">
+						<h3>1. Install the plugin</h3>
+					</div>
+					
+					
+					<div id="how2" class="how_img_r">
+						<img id="how_comment" src="pic/comment.svg">
+						<h3>2. See bad comment</h3>
+					</div>
+					
+					<div id="how3" class="how_img_l">
+						<img id="how_click" src="pic/click.svg">
+						<h3>3. Click to block</h3>
+					</div>
+					
+					<!--<div id="how4" class="how_img_r">
+						<img id="how_why" src="pic/why.svg">
+						<h3>4. Tell us why</h3>
+					</div>-->
+
+				</div>
+
+				<h2>Once back on Reddit, we've filtered all the annoying noise out for you.<Br>
+					It's as simple as that!</h2>
+
+			</div>
+
+		</section>
+
+		<!--*************************************      PLAY YOUR PART     *************************************************-->
+
+		<section id="playyourpart" class="screen_bg">
+
+			<div class="screen">
+
+				<!-- VERTICAL ALIGN TRICK -->
+				<div class="valign_dummy"></div>
+
+				<div class="content">
+
+					<div class="play">
+						<h1>Play your part</h1>
+						<img id="play_play" src="pic/playyourpart.svg">
+						<h2>Play a part in keeping Reddit free of negative and nasty comments,<br>be the change you want to see!</h2>
+						<p> Muzzle is a blocking system that helps you keep Reddit free from wicked comments.<br>
+						Once you've installed the plugin and started using it you can sign in to your Muzzle profile and<br>see all the users and comments you've reported and backtrack if you've made a mistake.<br>Next time you go to Reddit you won't see comments from the users you've reported!</p>
+						<p> Muzzle is still in Beta, and we will continuously introduce new features.</p>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!--*************************************      WHY?     ************************************************-->
+
+		<section id="why" class="screen_bg">
+
+			<div class="screen">
+
+				<!-- VERTICAL ALIGN TRICK -->
+				<div class="valign_dummy"></div>
+
+				<div class="content">
+
+					<h1>Why?</h1>
+					<img id="why_why" src="pic/whybother.svg">
+					<h2>Ever felt that the Internet is full of trolls and villains that ruin your  mood? <br>You are not alone!</h2>
+
+					<div class="why">
+					<img id="fourtyfive" src="pic/45.svg">
+					<p>of people who read comments in chat rooms like Reddit, report seeing malicious trolling behavior once a week or more according to this <a href="https://today.yougov.com/news/2014/10/20/over-quarter-americans-admit-malicious-online-comm/ ">survey</a>.
+ 					</p>
+					</div>
+
+					<div class="why">
+					<img id="twentyfive" src="pic/25.svg">
+					<p>of teenagers suffer from hate related incidents online. This figure is described by experts as a wake-up call on the impact of internet trolling.</p>
+					</div>
+
+					<div class="why">
+					<img id="oneoftventyfive" src="pic/1of25.svg">
+					<p>per day is the approximate time a moderator spends to keep forums clean from wicked comments and malicious trolling behavior.</p>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!--*************************************      PRIVACY POLICY     *************************************************-->
+
+		<section id="thenwhat" class="screen_bg">
+
+			<div class="screen">
+
+				<!-- VERTICAL ALIGN TRICK -->
+				<div class="valign_dummy"></div>
+
+				<div class="content">
+
+					<h1>Privacy Policy</h1>
+
+					<div class="privacy">
+						<img id="empowering" src="pic/empowering.svg">
+						<h2>How We Collect<br> Information</h2>
+						<p>We collect information to provide the Muzzle service: giving you power to make the Internet a human friendly place. We collect information from data your browser sends us. As most other sites, we also use "cookies" to understand how you use Muzzle, and to improve our service so it best fits your needs.</p>
+					</div>
+
+					<div class="privacy">
+						<img id="collect" src="pic/collectlove.svg">
+						<h2>How We Use<br> Information</h2>
+						<p>Through the information you provide us, we are able to identify the areas of issue and address them. Furthermore, we communicate with you and about the things you care to know about. We care deeply about your privacy and anonymity on the web, therefore we do not in any way share your data with anyone. </p>
+					</div>
+
+					<div class="privacy">
+						
+						<img id="fourgeeks" src="pic/fourgeeks.svg">
+						<h2>Changes To<br> Policy</h2>
+						<p> Muzzle is a project by 4 data geeks. We are always looking for new ways we can use the information you provide us to create greater value for you. This means our policy will undergo changes as we develop Muzzle. Information will be governed by the policy that is in place in the time of its collection.</p>
+					</div>
+
+				</div>
+
+
+			</div>
+
+		</section>
+
+		<!--*************************************      FOOTER     *************************************************-->
+
+		<section id="footer" class="screen_bg">
+
+			<div class="screen">
+
+				<!-- VERTICAL ALIGN TRICK -->
+				<div class="valign_dummy"></div>
+
+				<div class="content">
+					<a href="#" onClick="scrollMe('hero')"><img id="whitelogofooter" src="pic/whitelogo.svg"></a>
+					<a href="#" id="contact">Contact</a>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!--*************************************      THE END     *************************************************-->
+
+	</body>
+</html>

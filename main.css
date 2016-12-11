@@ -1,0 +1,331 @@
+
+
+body {
+	font-family: 'Lato', serif; 
+	background-color: #0A1729;
+	color: #EFEFEF;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3{
+	font-size: 1.6em;
+
+}
+
+p {
+	font-size: 1.3em;
+}
+
+#menu {
+	width:100%;
+	height: 3.438em;
+	margin:0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(10,23,41,0);
+}
+
+#menu a:link,
+#menu a:visited {
+	text-decoration: none;
+	color: #EFEFEF;
+}
+
+
+#menu a:hover,
+#menu a:active {
+	color:#CCC;
+}
+
+#leftnav {
+	float: left;
+}
+
+#rightnav {
+	float: right;
+}
+
+#menu ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+}
+
+#menu li {
+	margin: 0em 0.625em 0em 0.625em;
+}
+
+#whitelogomenu {
+	width: 70%;
+	margin-left: 50%;
+	margin-top: -10%;
+}
+
+.screen {
+	padding: 0;
+	margin: 0;
+	height: 60em;
+	/*border: solid;  /*<<<--- helps debugging */
+	clear: both;
+}
+
+.valign_dummy{
+	float: left;
+	height: 50%;
+	width: 100%;
+	margin-bottom: -1vh;
+}
+
+.content{
+	clear: both;
+	text-align: center;
+}
+
+.content:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+/* ------------------------------    BEGIN CONTENT    ----------------------------------*/
+
+/* ------------------------------        HERO         ----------------------------------*/
+
+#hero {
+	background: url(forest2.jpg) no-repeat;
+	background-size: cover;
+}
+
+#hero .screen {
+	background-color: rgba(10,23,41,0.6);
+}
+
+#hero .valign_dummy{
+	/* IF YOU NEED TO CHANGE VERTICAL ALIGN, PLAY HERE */
+	margin-bottom: -3vh;
+}
+
+/* ------------------------------     HOW IT WORKS      ----------------------------------*/
+
+#howitworks {
+    background: -o-linear-gradient(top, rgb(10,23,40) 0%, rgb(40,82,123) 100%);
+    background: -moz-linear-gradient(top, rgb(10,23,40) 0%, rgb(40,82,123) 100%);
+    background: -webkit-gradient(linear, left top, left top, color-stop(0, rgb(10,23,40)), color-stop(1, rgb(40,82,123)));
+    background: -webkit-linear-gradient(top, rgb(10,23,40) 0%, rgb(40,82,123) 100%);
+    background: -ms-linear-gradient(top, rgb(10,23,40) 0%, rgb(40,82,123) 100%);
+    background: linear-gradient(top, rgb(10,23,40) 0%, rgb(40,82,123) 100%);
+}
+
+#howitworks {
+	background-color: rgb(254,254,254);
+	
+}
+
+#howitworks .screen{
+	height: 60em;
+}
+
+#howitworks .valign_dummy{
+	
+	margin-bottom: -52vh;
+	
+}
+
+#howitworks .content {
+	margin: auto;
+	max-width: 70%;
+
+}
+
+.how_img_l {
+	float: left;
+	clear: both;
+	
+}
+
+.how_img_r {
+	float: right;
+	clear: both;
+	
+}
+
+.how_img_l img,
+.how_img_l h3 {
+	float:left;
+}
+
+.how_img_r img,
+.how_img_r h3 {
+	float:right;
+}
+
+#howitworks h3{
+	font-size: 1.6em;
+	margin: 2.6em 5%;
+}
+
+#how_install {
+	width:17%;
+}
+
+#how_comment {
+	width:17%;
+}
+
+#how_click {
+	width:17%;
+}
+
+#how_why {
+	width:19%;
+}
+
+#how2, #how3, #how4 {
+	margin-top: -5.6em;
+}
+
+#how3 {
+	margin-left: 1.3em;
+}
+
+#how4 {
+	margin-right: 18em;
+	margin-top: -2em;
+}
+
+/* ------------------------------     PLAY YOUR PART      ----------------------------------*/
+
+#playyourpart .screen{
+	height: 48em;
+}
+
+#playyourpart .valign_dummy{
+	
+	margin-bottom: -18em;
+}
+
+#playyourpart {
+	background: -o-linear-gradient(top, rgb(40,82,123) 0%, rgb(254,254,254) 100%);
+    background: -moz-linear-gradient(top, rgb(40,82,123) 0%, rgb(254,254,254) 100%);
+    background: -webkit-gradient(linear, left top, left top, color-stop(0, rgb(40,82,123)), color-stop(0.5, rgb(254,254,254)));
+    background: -webkit-linear-gradient(top, rgb(40,82,123) 0%, rgb(254,254,254) 100%);
+    background: -ms-linear-gradient(top, rgb(40,82,123) 0%, rgb(254,254,254) 100%);
+    background: linear-gradient(top, rgb(40,82,123) 0%, rgb(254,254,254) 100%);
+	
+	color: #030303;
+}
+
+
+
+#play_play {
+	width:35%;
+}
+
+/* ------------------------------     WHY      ----------------------------------*/
+
+.why {
+	float: left;
+	width: 23%;
+	margin: 2% 5%;
+}
+
+.why p {
+	text-align: justify;
+  	text-justify: inter-word;
+}
+
+.why a {
+	color: #EFEFEF;
+}
+
+#why .valign_dummy{
+	
+	margin-bottom: -52vh;
+}
+
+#why_why{
+	width: 15%;
+	margin-top: -2%;
+}
+
+#fourtyfive {
+	width: 50%;
+}
+
+#twentyfive {
+	width: 50%;
+}
+
+#oneoftventyfive{
+	width: 64%;
+}
+
+/* ------------------------------     PRIVACY POLICY      ----------------------------------*/
+
+#thenwhat .screen{
+	height: 50em;
+	
+}
+
+#thenwhat .valign_dummy{
+	
+	margin-bottom: -40vh;
+	
+}
+
+.privacy{
+	float: left;
+	width: 27%;
+	margin: 2% 3%;
+}
+
+.privacy p {
+	text-align: justify;
+  	text-justify: inter-word;
+
+}
+
+#thenwhat {
+	background-color: rgb(254,254,254);
+	color: #030303;
+}
+
+#collect{
+	width: 50%;
+}
+
+#empowering {
+	width: 50%;
+}
+
+#fourgeeks {
+	width: 53%;
+}
+
+/* ------------------------------     FOOTER      ----------------------------------*/
+
+#whitelogofooter {
+	width: 7%;
+	float: right;
+	margin-right: 7%;
+	margin-bottom: 1%;
+}
+
+#contact {
+	text-decoration: none;
+	color: #EFEFEF;
+}
+
+#footer .screen {
+	height: 10em;
+}
